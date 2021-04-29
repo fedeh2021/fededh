@@ -1,0 +1,1 @@
+[{"titulo":"hacer una app de notas","estado":"pendiente"},{"titulo":"pasarle el resuelto a los alumnos","estado":"en proceso"},{"titulo":"hacer el microdesafio2","estado":"pendiente"},{"titulo":"hacer el microdesafio1","estado":"termiando"}]
