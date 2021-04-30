@@ -29,9 +29,9 @@ console.log('Mi multiplicación es:' + unaCalculadora.multiplicar(3,6));
 
 let {listarTareas, agregarTarea, borrarTarea, tareasEstado} = require('./funcionesDeTareas');
 
-let obj_literal = require('./servicios/tareas.json');
+let arreglo_obj_literal = require('./servicios/tareas.json');
 
-listarTareas(obj_literal);
+listarTareas(arreglo_obj_literal);
 
 let nuevaTarea = {
     "codigo": 5,
@@ -39,11 +39,11 @@ let nuevaTarea = {
     "estado": "pendiente"
 };
 
-agregarTarea(nuevaTarea);
+agregarTarea(arreglo_obj_literal,nuevaTarea);
 
-agregarTarea(obj_literal,nuevaTarea);
+arreglo_objs_literal = borrarTarea(arreglo_obj_literal, 5);
 
-borrarTarea(obj_literal, 1);
+let nuevo = tareasEstado(arreglo_obj_literal, "En proceso");
 
-let nuevo = tareasEstado(obj_literal, "En proceso");
+console.log(nuevo);
 
