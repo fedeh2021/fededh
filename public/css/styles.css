@@ -1,0 +1,59 @@
+body {
+    background-color: #EAC926;
+    font-family:'Roboto', sans-serif;
+};
+
+h1 {
+    color: #03264C;
+    font-family: serif;
+    font-weight: 300;
+    font-size: 24px;
+};
+
+input{
+    cursor: pointer;
+}
+
+ul1 {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 24px;
+    color: #03264C;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 12px;
+    
+}
+
+footer {
+    text-align: center;
+}
+
+i{
+    margin: auto, auto, 10px, auto;
+    size: 2em;
+}
+
+.precio {
+    font-size: 18px;
+    color: #03264C;
+}
+
+.descuento {
+    font-size: 16px;
+    color: #03264C;
+}
+
+.descripcion {
+    font-size: 16px;
+    color: #03264C;
+}
+
+h4 {
+    color: #666;
+}
