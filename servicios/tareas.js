@@ -1,1 +1,0 @@
-[{"codigo":1,"titulo":"hacer una app de notas","estado":"pendiente"},{"codigo":2,"titulo":"pasarle el resuelto a los alumnos","estado":"en proceso"},{"codigo":3,"titulo":"hacer el microdesafio2","estado":"pendiente"},{"codigo":4,"titulo":"hacer el microdesafio1","estado":"termiando"},{"codigo":5,"titulo":"practicar js","estado":"pendiente"}]
