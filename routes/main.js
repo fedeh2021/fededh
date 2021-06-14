@@ -1,22 +1,16 @@
 let express = require('express');
-const router = require('./productos');
+let router = express.Router();
 
+const mainController = require('../controllers/mainController');
 
+router.get('/register', mainController.registro);
 
-router.get('/register', function(req, res) {
-    res.sendFile(path.resolve(__dirname,'./views/register.html'))
-});
+//router.get('/register', function(req, res) {
+  //  res.sendFile(path.resolve(__dirname,'./views/register.html'))
+//});
 
-router.get('/home', function(req, res) {
-    res.sendFile(path.resolve(__dirname,'./views/home.html'))
-});
+router.get('/',mainController.home);
 
-
-router.get('/login', function(req, res) {
-    res.sendFile(path.resolve(__dirname,'./views/login.html'))
-});
-
-
-
+router.get('/login', mainController.login);
 
 module.exports = router;

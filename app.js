@@ -5,28 +5,17 @@ const express = require('express');
 const path = require('path');
 const app = express();
 //const rutasProductos = require('./routes/productos.js');
-//const rutasMain = require('./routes/main.js');
+const rutasMain = require('./routes/main.js');
 
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 app.use('/public/img', express.static(__dirname + '/public/img'));
 
-app.listen(process.env.PORT || 3030, () => console.log('Esto fue exitoso'));
+app.listen(process.env.PORT || 3090, () => console.log('Esto fue exitoso'));
+
+app.set('view engine', 'ejs');
 
 //app.use('/productos', rutasProductos);
-//app.use('/', rutasMain);
+app.use('/', rutasMain);
 
-
-app.get('/register', function(req, res) {
-    res.sendFile(path.resolve(__dirname,'./views/register.html'))
-});
-
-app.get('/', function(req, res) {
-    res.sendFile(path.resolve(__dirname,'./views/home.html'))
-});
-
-
-app.get('/login', function(req, res) {
-    res.sendFile(path.resolve(__dirname,'./views/login.html'))
-});
