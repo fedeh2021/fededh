@@ -6,11 +6,14 @@ const path = require('path');
 const app = express();
 //const rutasProductos = require('./routes/productos.js');
 const rutasMain = require('./routes/main.js');
+const logMiddleware = require('./middleware/logMiddleware');
 
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
-
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json()); 
 app.use('/public/img', express.static(__dirname + '/public/img'));
+app.use(logMiddleware);
 
 app.listen(process.env.PORT || 3090, () => console.log('Esto fue exitoso'));
 
