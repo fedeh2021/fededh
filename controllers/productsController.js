@@ -31,7 +31,7 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		let nombreImagen = req.file;
+		let nombreImagen = req.file.filename;
 		let idNuevo = products[products.length-1].id + 1;
 		let nuevoObjeto =  Object.assign({id: idNuevo},req.body,{image:nombreImagen});
 		products.push(nuevoObjeto);
@@ -95,8 +95,8 @@ const controller = {
 		}
 		
 	    fs.writeFileSync(productsFilePath, JSON.stringify(products,null, ' '));
-		fs.unlinkSync(path.join(__dirname,'../../public/images/products/'+nombreImagen));
-		res.render('index',{productos: products});
+		fs.unlinkSync(path.join(__dirname,'./public/img/'+nombreImagen));
+		res.render('home',{productos: products});
 
 		}
 	

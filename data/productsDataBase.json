@@ -93,8 +93,8 @@
   "id": 13,
   "name": "Smart TV Samsung 4K 50",
   "description": "Con el Smart TV Samsung UN50MU6100, viví una nueva experiencia visual con la resolución 4K, que te presentará imágenes con gran detalle y de alta calidad. Ahora todo lo que veas cobrará vida con brillo y colores más reales. Gracias a su tamaño de 50\", podrás transformar tu espacio en una sala de cine y transportarte a donde quieras.",
-  "price": 34990,
-  "discount": 0,
+  "price": "34990",
+  "discount": "15",
   "image": "img-tv-samsung-smart.jpg",
   "category": "visited"
  },
@@ -106,5 +106,41 @@
   "category": "in-sale",
   "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
   "image": "img-parlante-sony.jpg"
+ },
+ {
+  "id": 17,
+  "name": "domingo",
+  "price": "11",
+  "discount": "11",
+  "category": "visited",
+  "description": "111",
+  "image": {
+   "fieldname": "imagenProducto",
+   "originalname": "tv.jpg",
+   "encoding": "7bit",
+   "mimetype": "image/jpeg",
+   "destination": "./public/img",
+   "filename": "img-tv.jpg",
+   "path": "public\\img\\img-tv.jpg",
+   "size": 4370
+  }
+ },
+ {
+  "id": 18,
+  "name": "federico",
+  "price": "222",
+  "discount": "22",
+  "category": "visited",
+  "description": "3333",
+  "image": {
+   "fieldname": "imagenProducto",
+   "originalname": "tv.jpg",
+   "encoding": "7bit",
+   "mimetype": "image/jpeg",
+   "destination": "./public/img",
+   "filename": "1630531609481_img.jpg",
+   "path": "public\\img\\1630531609481_img.jpg",
+   "size": 4370
+  }
  }
 ]

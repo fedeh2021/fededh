@@ -78,7 +78,7 @@
     color: gray;
     border-left: solid 1px #ebebeb;
     position: absolute;
-    right: 2px;
+    right: 420px;
     bottom: 12.5px;
     height: 60%;
 }
@@ -339,6 +339,9 @@ textarea.form-input{
     border: solid 1px gray;
     padding: 0 15px;
     justify-content: center;
+}
+.text-danger{
+    color: red;
 }
 
 @media (max-width: 361px) {

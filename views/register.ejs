@@ -14,74 +14,71 @@
     <%- include('./../views/partials/header') %>
         <img src="/img/img-home-banner.jpg" class="banner">
 
-        <% if (typeof errors != 'undefined') { %>
-             <p style="color: red">ERROR</p>
-               <ul>
-                   <% for (let i = 0; i < errors.length; i++ )  { %>
-                <li>
-                    <%= errors[i].msg %>
-                </li>
-                   <% } %> 
-               </ul>
-        <% } %>
-        <form action="/" method="POST" class="formulario" enctype="multipart/form-data">
+        <form action="/usuarios/register" method="POST" class="formulario" enctype="multipart/form-data">
             <h3>¡Registrate!</h3>
             <div class="control-formulario">
                 <label>Nombre y Apellido:</label>
-                <input type="text" name="nombreApellido" value="<%= locals.old && old.nombreApellido ? old.nombreApellido : '' %>" class="control" placeholder="Nombre y Apellido">
+                <input type="text" name="nombreApellido" value="<%= locals.oldData ? oldData.nombreApellido : null%>" class="control <%=locals.errors && errors.nombreApellido ? 'is-invalid' : null %>" placeholder="Nombre y Apellido">
+                <% if (locals.errors && errors.nombreApellido) { %>
+                    <div class="text-danger">
+                        <%= errors.nombreApellido.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="control-formulario">
                 <label>Nombre de usuario:</label>
-                <input type="text" name="nombreUsuario" class="control" placeholder="Nombre de Usuario">
+                <input type="text" name="nombreUsuario" value="<%= locals.oldData ? oldData.nombreUsuario : null%>" class="control <%=locals.errors && errors.nombreUsuario ? 'is-invalid' : null %>" placeholder="Nombre de Usuario">
+                <% if (locals.errors && errors.nombreUsuario) { %>
+                    <div class="text-danger">
+                        <%= errors.nombreUsuario.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="control-formulario">
                 <label>Dirección de email:</label>
-                <input type="email" name="email" class="control" placeholder="Direccion de email">
+                <input type="email" name="email" class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null%>" placeholder="Direccion de email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div class="control-formulario">
                 <label>Fecha de Nacimiento:</label>
-                <input type="date" name="fechaDeNacimiento" class="control">
+                <input type="date" name="birthday" value="<%= locals.oldData ? oldData.birthday : null%>" class="control <%= locals.errors && errors.birthday ? 'is-invalid' : null %>">
+                <% if (locals.errors && errors.birthday) { %>
+                    <div class="text-danger">
+                        <%= errors.birthday.msg %> 
                     </div>
-            <div class="control-formulario">
-                <label>Domicilio:</label>
-                <input type="text" name="domicilio" class="control" placeholder="Domicilio">
-                    </div>
-            <div class="control-formulario">
-                <label>Perfil de usuario:</label>
-                <label>Comprador</label><input type="radio" name="comprar" class="control">
-                <label>Vendedor</label><input type="radio" name="vender" class="control">
-            </div>
-            <div class="control-formulario">
-                <select name="categorias" class="control-formulario">
-                   <option class="control" value="0">Categorías</option>
-                   <option class="control" value="1">Electro</option>
-                   <option class="control" value="2">Moda</option>  
-                   <option class="control" value="3">Hogar</option> 
-                   <option class="control" value="4">Juguetería</option>   
-                   <option class="control" value="5">Vida sana</option> 
-                </select>
+                <% } %>
             </div>
             <div class="control-formulario">
                 <label>Foto de usuario:</label>
-                <input type="file" name="fotoUsuario" class="control" placeholder="Foto de usuario" multiple>
+                <input type="file" name="avatar" class="control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" placeholder="Foto de usuario" multiple>
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="text-danger">
+                        <%= errors.avatar.msg %> 
                     </div>
-            <div class="control-formulario">
-                 <label>Contraseña:</label>
-                 <input type="password" name="contraseña" class="control" placeholder="Contraseña">
+                <% } %>
             </div>
             <div class="control-formulario">
-               <label>Confirmar contraseña:</label>
-              <input type="password" class="control" placeholder="Confirmar contraseña">
+                 <label>Contraseña:</label>
+                 <input type="password" name="password" class="control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Contraseña">
+                 <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>
             </div>
         
             <button type="submit" class="boton-formulario">Enviar</button>
             <button type="reset" class="boton-formulario">Borrar</button>
         </form>
-        <%- include('./../views/partials/footer') %>
-              <div class="sub-footer">
-                        <div class="container">
-                    <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
-                    </div>
-                    </div>
+<%- include('./../views/partials/footer') %>
+<div class="sub-footer">
+    <div class="container">
+<p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+    </div>
+</div>
     </body>
     </html>
