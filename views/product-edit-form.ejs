@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('./../views/partials/header', {title: productoEnDetalle.name}) %> 
+    <div class="banner"><img src="/img/img-home-banner.jpg" width="100%"></div>
+<main>
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div>
+				<h2 class="products-title">Estás editando: <i><%=productoEnDetalle.name %></i></h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/productos/edit/<%=productoEnDetalle.id%>?_method=PUT" method="POST">
+				<div class="rowi product-detail">
+					<div class="control-formulario">
+						<label for="name" class="form-label">Nombre del producto: </label>
+						<input type="text" id="name" name="name" value="<%=productoEnDetalle.name %>" class="form-input">
+					</div>
+					<div class="control-formulario">
+						<label for="price" class="form-label">Precio del producto: $</label>
+						<input type="text" id="price" name="price" class="form-input" value='<%=productoEnDetalle.price %>'>
+					</div>
+					<div class="control-formulario">
+						<label for="discount" class="form-label">Descuento: %</label>
+						<input type="text" id="discount" name="discount" class="form-input"value='<%=productoEnDetalle.discount%>'>
+					</div>
+					<div class="control-formulario">
+						<label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input" >
+							<option value="<%=productoEnDetalle.category%>"selected>Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited" >Últimos agregados</option>
+						</select>
+					</div>
+					<div class="control-formulario">
+						<label for="description" class="form-label">Descipción:</label>
+						<textarea name="description" id="description" class="form-input"><%=productoEnDetalle.description %></textarea>
+					</div>
+					<div class="control-formulario">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</main>
+	<%- include('./../views/partials/footer') %>
+
+	<div class="sub-footer">
+		<div class="container">
+	<p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+	</div>
+	</div>        
+
+</body>		
+</html>

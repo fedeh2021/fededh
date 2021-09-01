@@ -84,7 +84,7 @@
 }
 .search-form-input {
     border:solid 1px #ebebeb;
-    width: 100%;
+    width: 50%;
     padding:  7px 35px 7px 7px;
     border-radius: 3px;
     height: 40px;
@@ -236,6 +236,109 @@ main {
 }
 nav {
     display: none;
+}
+.actions-list{
+    margin-bottom: 50px;
+}
+.actions-list li{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.product-detail{
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.product-detail-price{
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+.product-detail-img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.product-detail-title{
+    font-weight: 400;
+    font-size: 2.8em;
+}
+.product-detail-discount{
+    font-size: 2.1em;
+    margin: 10px 0;
+}
+.product-detail-description{
+    padding: 15px;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.buy-now-button{
+    background-color: blue;
+    font-size: 1.6em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+}
+.rowi{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    
+}
+.products-title{
+    font-size: 2.4em;
+    font-weight: 400;
+    color: gray;
+}
+.action-button.edit{
+    background-color: chocolate;
+}
+.action-button{
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-top: 15px;
+}
+.action-button.delete{
+    background-color: rgb(248, 69, 37);
+}
+a{
+    text-decoration: none;
+}
+.form-label{
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 10px 0;
+}
+textarea.form-input{
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+}
+.form-input{
+    display: flex;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px gray;
+    padding: 0 15px;
+    justify-content: center;
 }
 
 @media (max-width: 361px) {

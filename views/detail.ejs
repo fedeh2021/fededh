@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('./../views/partials/header') %> 
+    <div class="banner"><img src="/img/img-home-banner.jpg" width="100%"></div>
+<main>
+
+	<!-- product detail -->
+	<div class="fondo">
+		
+		<div class="rowi">
+				<h2 class="products-title"></h2>
+		<div class="product-detail">
+			
+				<div>
+					<img src="/img/<%=productoEnDetalle.image %>" alt="product image" class="product-detail-img">
+					<p class="product-detail-description"><%=productoEnDetalle.description %>
+					</p>
+				</div>
+				<div>
+					<article class="product-detail-info">
+						<h2 class="product-detail-title"><%=productoEnDetalle.name %></h2>
+						
+							<p class="product-detail-price">$<%=productoEnDetalle.price %>
+								/
+								<%=productoEnDetalle.discount %>%
+							</p>
+							<p class="product-detail-discount">
+								$<%=productoEnDetalle.price - (productoEnDetalle.price * (productoEnDetalle.discount/100)) %>
+							</p>
+							
+						<ul class="actions-list">
+							<li>
+								<i class="far fa-credit-card iconos"></i>
+								<p>Pagá en 12 cuotas sin interes</p>
+							</li>
+							<li>
+								<i class="fas fa-store iconos"></i>
+								<p>Retiro gratis en locales del vendedor</p>
+							</li>
+						</ul>
+
+						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
+						<hr>
+
+						<a href="/productos/edit/<%=productoEnDetalle.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/productos/<%=productoEnDetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<%- include('./../views/partials/footer') %>
+
+        <div class="sub-footer">
+            <div class="container">
+        <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+        </div>
+        </div>        
+
+</body>	
+</html>

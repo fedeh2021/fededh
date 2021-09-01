@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('./../views/partials/header') %> 
+    <div class="banner"><img src="/img/img-home-banner.jpg" width="100%"></div>
+	<!-- todos los productos -->
+	<div class="fondo">
+		<h2 class="visita">Todos los productos</h2>
+		<div class="row">
+			
+		<% for(let i=0;i<productos.length;i++) { %> 
+				<section class="product-box">
+					<div class="iconoenvio"><i class="fas fa-dolly"></i></div>
+					<a href="/productos/detail/<%=productos[i].id %>">
+						<figure class="product-box_image">
+							<img src="/img/<%=productos[i].image %>" alt="imagen de producto">
+						</figure>
+						<ul class="product-box_data">
+							<li class="precio">$<%=productos[i].price %> </li>
+							<li class="descuento"><%=productos[i].discount %>% </li>
+							<h3><%=productos[i].name %></h3>
+						</ul>
+					</a>
+				</section>
+			<% } %>
+		</div>
+	</div>
+	<!-- /todos los productos -->
+
+	<%- include('./../views/partials/footer') %>
+
+	<div class="sub-footer">
+		<div class="container">
+	<p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+	</div>
+	</div>
+</body>	
+</html>
