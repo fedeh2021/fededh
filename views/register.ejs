@@ -14,14 +14,14 @@
     <%- include('./../views/partials/header') %>
         <img src="/img/img-home-banner.jpg" class="banner">
 
-        <form action="/usuarios/register" method="POST" class="formulario" enctype="multipart/form-data">
+        <form method="POST" action="/usuarios/register"  class="formulario" enctype="multipart/form-data">
             <h3>¡Registrate!</h3>
             <div class="control-formulario">
-                <label>Nombre y Apellido:</label>
-                <input type="text" name="nombreApellido" value="<%= locals.oldData ? oldData.nombreApellido : null%>" class="control <%=locals.errors && errors.nombreApellido ? 'is-invalid' : null %>" placeholder="Nombre y Apellido">
-                <% if (locals.errors && errors.nombreApellido) { %>
+                <label>Nombre Completo:</label>
+                <input type="text" name="fullName" value="<%= locals.oldData ? oldData.fullName : null%>" class="control <%=locals.errors && errors.fullName ? 'is-invalid' : null %>" placeholder="Nombre y Apellido">
+                <% if (locals.errors && errors.fullName) { %>
                     <div class="text-danger">
-                        <%= errors.nombreApellido.msg %> 
+                        <%= errors.fullName.msg %> 
                     </div>
                 <% } %>
             </div>

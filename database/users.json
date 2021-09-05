@@ -1,0 +1,19 @@
+[
+ {
+  "id": 1,
+  "fullName": "fedeh",
+  "email": "fede@gmail.com",
+  "password": "$2a$10$7En9qf1umym1/yVsKS5uW.4foabMiuEFOXJzPKEZJLmtlqGZgJUPG",
+  "country": "Bolivia",
+  "avatar": "1630877071077_img.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "fedeh",
+  "nombreUsuario": "fedeh",
+  "email": "fede1@gmail.com",
+  "birthday": "1111-11-11",
+  "password": "$2a$10$fXc3ELl3B5TCcxV2tlHzgesfZf6uNKNvnjCVHsWerACijMp2URpZ2",
+  "avatar": "1630883713772_img.jpg"
+ }
+]

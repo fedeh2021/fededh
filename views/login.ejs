@@ -14,25 +14,21 @@
     <%- include('./../views/partials/header') %>
         <img src="/img/img-home-banner.jpg" class="banner">
 
-        <% if (typeof errors != 'undefined') { %>
-            <p style="color: red">ERROR</p>
-              <ul>
-                  <% for (let i = 0; i < errors.length; i++ ) { %>
-               <li>
-                   <%= errors[i].msg %>
-               </li>
-                  <% } %> 
-              </ul>
-       <% } %>
-<form action="/registro-usuario" method="POST" class="formulario">
+       
+<form action="/usuarios/login" method="POST" class="formulario">
     
     <div class="control-formulario">
-    <label>Nombre de usuario:</label>
-    <input type="text" name="nombre" class="control" placeholder="Nombre de usuario">
+    <label>Email:</label>
+    <input type="text" name="email" class="control" placeholder="email">
+    <% if (locals.errors && errors.email) { %>
+        <div class="text-danger">
+            <%= errors.email.msg %>
+        </div>
+    <% } %>
     </div>
     <div class="control-formulario">
   <label>Contraseña:</label>
-    <input type="password" class="control" placeholder="contraseña">
+    <input type="password" name="password" class="control" placeholder="contraseña">
     </div>
     <button type="submit" class="boton-formulario">Enviar</button>
     <label>Recordame</label>

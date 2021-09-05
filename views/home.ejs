@@ -22,9 +22,9 @@
            <% for (let i=0;i<productos.length;i++) { %>
     <article class="product-box">
         <div class="iconoenvio"><i class="fas fa-dolly"></i></div>
-                <a href="/productos/detail/<%=productos[i].id  %>">
+                <a href="/productos/detail/<%=productos[i].id%>">
                     <figure class="product-box_image">
-                        <img src="/img/<%=productos[i].image  %>" alt="imagen de producto">
+                        <img src="/img/<%=productos[i].image%>" alt="imagen de producto">
                     </figure>
                     <ul class="product-box_data">
                         <li class="precio">$ <%=productos[i].price %></li>
@@ -42,14 +42,14 @@
         <% for (let i=0;i<productos.length;i++) { %>
  <article class="product-box">
      <div class="iconoenvio"><i class="fas fa-dolly"></i></div>
-             <a href="/products/detail/<%= productos[i].id  %>">
+             <a href="/products/detail/<%=productos[i].id%>">
                  <figure class="product-box_image">
-                     <img src="/img/<%= productos[i].image  %>" alt="imagen de producto">
+                     <img src="/img/<%=productos[i].image%>" alt="imagen de producto">
                  </figure>
                  <ul class="product-box_data">
-                     <li class="precio">$ <%= productos[i].price %></li>
-                     <li class="descuento"><%= productos[i].discount %> % </li>
-                     <h3><%= productos[i].name %></h3>
+                     <li class="precio">$ <%=productos[i].price %></li>
+                     <li class="descuento"><%=productos[i].discount %> % </li>
+                     <h3><%=productos[i].name %></h3>
                  </ul>
              </a>
  </article>

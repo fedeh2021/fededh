@@ -109,38 +109,11 @@
  },
  {
   "id": 17,
-  "name": "domingo",
-  "price": "11",
-  "discount": "11",
+  "name": "TV",
+  "price": "160000",
+  "discount": "15",
   "category": "visited",
-  "description": "111",
-  "image": {
-   "fieldname": "imagenProducto",
-   "originalname": "tv.jpg",
-   "encoding": "7bit",
-   "mimetype": "image/jpeg",
-   "destination": "./public/img",
-   "filename": "img-tv.jpg",
-   "path": "public\\img\\img-tv.jpg",
-   "size": 4370
-  }
- },
- {
-  "id": 18,
-  "name": "federico",
-  "price": "222",
-  "discount": "22",
-  "category": "visited",
-  "description": "3333",
-  "image": {
-   "fieldname": "imagenProducto",
-   "originalname": "tv.jpg",
-   "encoding": "7bit",
-   "mimetype": "image/jpeg",
-   "destination": "./public/img",
-   "filename": "1630531609481_img.jpg",
-   "path": "public\\img\\1630531609481_img.jpg",
-   "size": 4370
-  }
+  "description": "TV HD",
+  "image": "1630589562620_img.jpg"
  }
 ]

@@ -8,26 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <%- include('./../views/partials/header') %> 
     <div class="banner"><img src="/img/img-home-banner.jpg" width="100%"></div>
 <main>
-
-	<!-- product detail -->
-	<div class="fondo">
-		
-		<div class="rowi">
-				<h2 class="products-title"></h2>
+	<div class="container products-wrapper">
+		<div class="col-12">
+				<h2 class="products-title"></h2></div>
 		<div class="product-detail">
-			
-				<div>
+		<div class="rowe">	
+				<div class="col-12 col-lg-8">
 					<img src="/img/<%=productoEnDetalle.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description"><%=productoEnDetalle.description %>
 					</p>
 				</div>
-				<div>
+				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
 						<h2 class="product-detail-title"><%=productoEnDetalle.name %></h2>
 						
@@ -41,11 +39,11 @@
 							
 						<ul class="actions-list">
 							<li>
-								<i class="far fa-credit-card iconos"></i>
+								<i class="fas fa-credit-card"></i>
 								<p>Pagá en 12 cuotas sin interes</p>
 							</li>
 							<li>
-								<i class="fas fa-store iconos"></i>
+								<i class="fas fa-store"></i>
 								<p>Retiro gratis en locales del vendedor</p>
 							</li>
 						</ul>

@@ -25,9 +25,27 @@
     <li><a href="#">Ayuda</a></li>
 </ul>
     <ul class="navega-derecha">
-    <li><a href="/usuarios/register">Creá tu cuenta</a></li> <i class="far fa-address-card"></i>
-    <li><a href="/usuarios/login">Ingresá</a></li><i class="fas fa-sign-in-alt"></i>
-    <li><a href="#">Mis compras</a></li><i class="fas fa-shopping-basket"></i>
+        <% if (locals.isLogged) { %>
+            <li class="barra-logeado">
+            <a href="#" class="nav-link dropdown-toggle" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/avatars/<%=locals.userLogged.avatar %>" width="80" style="border-radius: 100%">
+                 Hola <%= locals.userLogged.nombreUsuario %></a>
+            <ul class="ul-opciones" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/usuarios/profile">Mi perfil</a> 
+                <li><hr class="dropdown-divider"></li>
+                <a class="dropdown-item" href="/usuarios/logout">Cerrar sesión</a>
+                <li type="button" class= "icono-carrito"><i class="fas fa-shopping-basket"></i></li>
+            </ul>
+            </li>
+         
+        <% } else { %>
+            <div class="items-barra-logeo">
+                <li><a href="/usuarios/register"><i class="fas fa-address-card"></i></a></li>
+                <li><a href="/usuarios/login"><i class="fas fa-sign-in-alt"></i></a></li>
+                <li><button class="icono-carrito"><i class="fas fa-shopping-basket"></i></button></li>
+            
+        <% } %>
+        </div>
 </ul>
 </nav>
         </header>
