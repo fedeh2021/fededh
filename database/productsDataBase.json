@@ -115,5 +115,23 @@
   "category": "visited",
   "description": "TV HD",
   "image": "1630589562620_img.jpg"
+ },
+ {
+  "id": 18,
+  "name": "Iphone 11 128GB",
+  "price": "400000",
+  "discount": "10",
+  "category": "visited",
+  "description": "Un nuevo sistema de cámara dual que abarca un campo de visión más amplio. El chip más rápido que haya tenido un smart­phone. Una batería que dura todo el día, para que hagas más y cargues menos. Y el vídeo de mayor calidad en un smart­phone, que hará que tus recuerdos sean aún más inolvidables. El iPhone 11 llega pisando fuerte.",
+  "image": "1630933333011_img.jpg"
+ },
+ {
+  "id": 19,
+  "name": "ff",
+  "price": "111",
+  "discount": "11",
+  "category": "visited",
+  "description": "222",
+  "image": "1630933399034_img.jpg"
  }
 ]
