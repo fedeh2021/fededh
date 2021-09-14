@@ -5,13 +5,15 @@ const express = require('express');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const path = require('path');
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const app = express();
+app.use(express.static('./public'));
+app.use(express.urlencoded({ extended: false}));
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware')
 app.use(session({secret: 'secreto',resave: false,saveUninitialized: false,}))
 app.use(cookies());
 app.use(userLoggedMiddleware);
-app.use(express.urlencoded({ extended: false}));
-app.use(express.static('./public'));
+
 app.listen(process.env.PORT || 3090, () => console.log('Esto fue exitoso'));
 
 app.set('view engine', 'ejs');
@@ -23,7 +25,6 @@ app.use('/productos', rutasProductos);
 app.use('/usuarios', rutasUsuarios);
 
 
-const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
 //const publicPath = path.resolve(__dirname, );

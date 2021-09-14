@@ -100,6 +100,7 @@ main {
     display: block;
     text-decoration: none;
     position: relative;
+    background-color: #ebebeb;
 }
 .barra-logeado{
     display:flex;
@@ -135,6 +136,7 @@ main {
     align-items: center;
     flex-direction: row;
     margin-top: 10%;
+    cursor: pointer;
 }
 
 .items-barra-logeo li{
@@ -301,12 +303,12 @@ nav {
     margin-right: 15px;
 }
 .products-wrapper{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 20px;
     background-color: #ebebeb;
     font-family:'Roboto', sans-serif;
     text-align: center;
     text-decoration: none;
+    margin: auto;
 }
 .product-detail{
     border-radius: 8px;
@@ -507,13 +509,7 @@ textarea.form-input{
     margin-top: 1.5vh;
     margin-left: 1.5vh;
 }
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 .row {
    display: flex;
    flex-wrap: wrap;
