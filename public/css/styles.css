@@ -243,31 +243,11 @@ main {
     transition: opacity 450ms;
 }
 
-.control.formulario {
-    margin-bottom: 4vw;
-    justify-content: center;
-    display: flex;
-    align-content: center;
-}
-
 .control-formulario label {
     margin-bottom: 1vw;
     font-style: italic;
     display: flex;
     justify-content: center;
-    margin-top: 1vw;
-}
-.control-formulario select {
-    margin-bottom: 1vw;
-    font-style: italic;
-    margin-top: 1vw;
-}
-
-.control input {
-    padding: 1vw;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 2vw;
     margin-top: 1vw;
 }
 
@@ -340,13 +320,13 @@ nav {
     background-color: blue;
     font-size: 1.6em;
     color: #ffffff;
-    display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
     border-radius: 8px;
     border: none;
     margin-bottom: 15px;
+    margin-top: 3%;
 }
 
 .products-title{
@@ -385,17 +365,18 @@ textarea.form-input{
     padding: 15px;
 }
 .form-input{
-    display: flex;
-    width: 100%;
     height: 45px;
-    margin-bottom: 2vw;
+    width: 70%;
     margin-top: 1vw;
     font-size: 1.5em;
+    font-style: italic;
     border-radius: 8px;
     border: none;
     border: solid 1px gray;
     padding: 0 15px;
+    margin-bottom: 2vw;
     justify-content: center;
+    align-content: center;
 }
 .text-danger{
     color: red;

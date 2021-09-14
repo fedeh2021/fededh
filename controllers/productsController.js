@@ -86,8 +86,8 @@ const controller = {
 	destroy : (req, res) => {
 
 		let idProducto = req.params.id;	
-		for(let i=0;i<products.length;i++){
-			if (products[i].id==idProducto){
+		for(let i=0; i < products.length; i++){
+			if (products[i].id == idProducto){
 				var nombreImagen=products[i].image;
 				products.splice(i,1);
 				break;
@@ -95,9 +95,9 @@ const controller = {
 		}
 		
 	    fs.writeFileSync(productsFilePath, JSON.stringify(products,null, ' '));
-		fs.unlinkSync(path.join(__dirname,'./public/img/'+nombreImagen));
-		res.render('home',{productos: products});
-
+		fs.unlinkSync(path.join(__dirname,'./public/img/'+ nombreImagen));
+		//res.render('home',{productos: products});
+		res.redirect("/")
 		}
 	
 };

@@ -18,8 +18,8 @@
 <form action="/usuarios/login" method="POST" class="formulario">
     
     <div class="control-formulario">
-    <label>Email:</label>
-    <input type="text" name="email" class="control" placeholder="email">
+    <label class="form-label">Email:</label>
+    <input type="text" name="email" class="form-input" placeholder="ejemplo@ejemplo.com">
     <% if (locals.errors && errors.email) { %>
         <div class="text-danger">
             <%= errors.email.msg %>
@@ -27,11 +27,11 @@
     <% } %>
     </div>
     <div class="control-formulario">
-  <label>Contraseña:</label>
-    <input type="password" name="password" class="control" placeholder="contraseña">
+  <label class="form-label">Contraseña:</label>
+    <input type="password" name="password" class="form-input" placeholder="contraseña">
     </div>
-    <button type="submit" class="boton-formulario">Enviar</button>
-    <label>Recordame</label>
+    <button type="submit" class="buy-now-button">Enviar</button>
+    <label class="form-label">Recordame</label>
     <input type="checkbox" name="recordame">
 </form>
 

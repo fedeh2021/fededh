@@ -1,15 +1,5 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Liebre</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
-</head>
+    <%- include('./partials/head') %>
 <body>
     <%- include('./../views/partials/header') %>
         <img src="/img/img-home-banner.jpg" class="banner">
@@ -17,8 +7,8 @@
         <form method="POST" action="/usuarios/register"  class="formulario" enctype="multipart/form-data">
             <h3>¡Registrate!</h3>
             <div class="control-formulario">
-                <label>Nombre Completo:</label>
-                <input type="text" name="fullName" value="<%= locals.oldData ? oldData.fullName : null%>" class="control <%=locals.errors && errors.fullName ? 'is-invalid' : null %>" placeholder="Nombre y Apellido">
+                <label class="form-label">Nombre Completo:</label>
+                <input type="text" name="fullName" value="<%= locals.oldData ? oldData.fullName : null%>" class="form-input <%=locals.errors && errors.fullName ? 'is-invalid' : null %>" placeholder="Nombre y Apellido">
                 <% if (locals.errors && errors.fullName) { %>
                     <div class="text-danger">
                         <%= errors.fullName.msg %> 
@@ -26,8 +16,8 @@
                 <% } %>
             </div>
             <div class="control-formulario">
-                <label>Nombre de usuario:</label>
-                <input type="text" name="nombreUsuario" value="<%= locals.oldData ? oldData.nombreUsuario : null%>" class="control <%=locals.errors && errors.nombreUsuario ? 'is-invalid' : null %>" placeholder="Nombre de Usuario">
+                <label class="form-label">Nombre de usuario:</label>
+                <input type="text" name="nombreUsuario" value="<%= locals.oldData ? oldData.nombreUsuario : null%>" class="form-input <%=locals.errors && errors.nombreUsuario ? 'is-invalid' : null %>" placeholder="Nombre de Usuario">
                 <% if (locals.errors && errors.nombreUsuario) { %>
                     <div class="text-danger">
                         <%= errors.nombreUsuario.msg %> 
@@ -35,8 +25,8 @@
                 <% } %>
             </div>
             <div class="control-formulario">
-                <label>Dirección de email:</label>
-                <input type="email" name="email" class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null%>" placeholder="Direccion de email">
+                <label class="form-label">Dirección de email:</label>
+                <input type="email" name="email" class="form-input <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null%>" placeholder="ejemplo@ejemplo.com">
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
                         <%= errors.email.msg %> 
@@ -44,8 +34,8 @@
                 <% } %>
             </div>
             <div class="control-formulario">
-                <label>Fecha de Nacimiento:</label>
-                <input type="date" name="birthday" value="<%= locals.oldData ? oldData.birthday : null%>" class="control <%= locals.errors && errors.birthday ? 'is-invalid' : null %>">
+                <label class="form-label">Fecha de Nacimiento:</label>
+                <input type="date" name="birthday" value="<%= locals.oldData ? oldData.birthday : null%>" class="form-input <%= locals.errors && errors.birthday ? 'is-invalid' : null %>">
                 <% if (locals.errors && errors.birthday) { %>
                     <div class="text-danger">
                         <%= errors.birthday.msg %> 
@@ -53,8 +43,8 @@
                 <% } %>
             </div>
             <div class="control-formulario">
-                <label>Foto de usuario:</label>
-                <input type="file" name="avatar" class="control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>" placeholder="Foto de usuario" multiple>
+                <label class="form-label">Foto de usuario:</label>
+                <input type="file" name="avatar" >
                 <% if (locals.errors && errors.avatar) { %>
                     <div class="text-danger">
                         <%= errors.avatar.msg %> 
@@ -62,8 +52,8 @@
                 <% } %>
             </div>
             <div class="control-formulario">
-                 <label>Contraseña:</label>
-                 <input type="password" name="password" class="control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Contraseña">
+                 <label class="form-label">Contraseña:</label>
+                 <input type="password" name="password" class="form-input <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Contraseña">
                  <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
                         <%= errors.password.msg %> 
@@ -71,8 +61,8 @@
                 <% } %>
             </div>
         
-            <button type="submit" class="boton-formulario">Enviar</button>
-            <button type="reset" class="boton-formulario">Borrar</button>
+            <button type="submit" class="buy-now-button">Enviar</button>
+            <button type="reset" class="buy-now-button">Borrar</button>
         </form>
 <%- include('./../views/partials/footer') %>
 <div class="sub-footer">

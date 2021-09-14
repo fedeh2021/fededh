@@ -2,8 +2,8 @@
  {
   "id": 1,
   "name": "Cafetera Moulinex Dolce Gusto Edited",
-  "price": 100,
-  "discount": 50,
+  "price": "10000",
+  "discount": "25",
   "category": "visited",
   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
   "image": "img-cafetera-moulinex.jpg"
@@ -124,14 +124,5 @@
   "category": "visited",
   "description": "Un nuevo sistema de cámara dual que abarca un campo de visión más amplio. El chip más rápido que haya tenido un smart­phone. Una batería que dura todo el día, para que hagas más y cargues menos. Y el vídeo de mayor calidad en un smart­phone, que hará que tus recuerdos sean aún más inolvidables. El iPhone 11 llega pisando fuerte.",
   "image": "1630933333011_img.jpg"
- },
- {
-  "id": 19,
-  "name": "ff",
-  "price": "111",
-  "discount": "11",
-  "category": "visited",
-  "description": "222",
-  "image": "1630933399034_img.jpg"
  }
 ]
