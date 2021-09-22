@@ -15,7 +15,7 @@ app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
-const userLoggedMiddleware = require('./middleware/userLoggedMiddleware')
+const userLoggedMiddleware = require('./src/middleware/userLoggedMiddleware')
 app.use(session({secret: 'secreto',resave: false,saveUninitialized: false,}))
 
 app.use(userLoggedMiddleware);
@@ -23,9 +23,9 @@ app.use(userLoggedMiddleware);
 app.listen(process.env.PORT || 3090, () => console.log('Esto fue exitoso'));
 
 
-const rutasProductos = require('./routes/productos');
-const rutasMain = require('./routes/main');
-const rutasUsuarios = require('./routes/usuarios');
+const rutasProductos = require('./src/routes/productos');
+const rutasMain = require('./src/routes/main');
+const rutasUsuarios = require('./src/routes/usuarios');
 const { cookie } = require('express-validator');
 
 app.use('/', rutasMain);
