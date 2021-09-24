@@ -12,11 +12,10 @@
     "method-override": "^3.0.0",
     "moment": "^2.29.1",
     "multer": "^1.4.2",
+    "nodemon": "^2.0.13",
     "node": "^16.9.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.9"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,5 +29,5 @@
     "url": "https://github.com/fedeh2021/mercado-liebre/issues"
   },
   "homepage": "https://github.com/fedeh2021/mercado-liebre#readme",
-  "description": ""
+  "description": "Primer e-commerce.\r Contiene vista home con productos, header con reedireccion. Dentro, boton para crear nuevo producto que se guarda en json. \r Posibilidad de registrar nuevo usuario, que se guarda en json, y hacer login con ese usuario.\r Los productos se pueden editar o borrar, los datos tambien se alteran en el json."
 }
