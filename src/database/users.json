@@ -6,6 +6,27 @@
   "email": "admin@admin.com",
   "birthday": "2222-02-22",
   "password": "$2a$10$QPGX2aZbco5A1Gqu1G6Cqu2ARf2N483g7sjsfLIlI5rd0QoQ29GuK",
+  "rol": 1,
   "avatar": "1630932851886_img.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "jose",
+  "nombreUsuario": "gonz",
+  "email": "jose@mail.com",
+  "birthday": "1995-05-12",
+  "password": "$2a$10$xC4KUj9L3K.CeT.qXw5J6uWXaoEdlUTdEZ746.UOQIUi1ckjk1adm",
+  "rol": 0,
+  "avatar": "1635858934500_img.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": "carlos",
+  "nombreUsuario": "g",
+  "email": "carl@carl.com",
+  "birthday": "1111-11-11",
+  "password": "$2a$10$.D8mB1i2iSxoEJZeBnBWWehaPpHGz1qeYHq5RN7yFhVpnqAELkwpS",
+  "avatar": "1635860382326_img.jpg",
+  "rol": 0
  }
 ]

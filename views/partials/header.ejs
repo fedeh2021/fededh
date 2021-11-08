@@ -2,7 +2,7 @@
     <div class="main-header-top-bar">
         <a href="/"><img src="/img/logo-mercado-liebre.svg" class="logo"></a>
     
-        <form action="/search" class="nav-search" method="GET" role="search"> 
+        <form action="/productos/search" class="nav-search" method="GET" role="search"> 
             <input type="text" name="busqueda" placeholder="Encontrá lo que buscas..." maxlength="120" autocomplete="off" class="search-form-input">
                <button type="submit" value="Buscar" class="nav-search-boton">
                    <div class="lupa-form"><i class="fas fa-search"></i></div>
@@ -21,31 +21,37 @@
     <li><a href="/productos">Todos los productos</a></li>
     <li><a href="#">Ofertas</a></li>
     <li><a href="#">Tiendas Oficiales</a></li>
+    <% if (locals.isLogged.rol === 1) { %>
     <li><a href="/productos/create">Vender</a></li>
+    <% } %>
     <li><a href="#">Ayuda</a></li>
 </ul>
     <ul class="navega-derecha">
         <% if (locals.isLogged) { %>
             <li class="barra-logeado">
-            <a href="#" class="nav-link dropdown-toggle" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/img/avatars/<%=locals.userLogged.avatar %>" width="80" style="border-radius: 100%">
+            <a href="/usuarios/profile" class="nav-link dropdown-toggle" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/avatars/<%=locals.userLogged.avatar %>" width="68" style="border-radius: 100%">
                  Hola <%= locals.userLogged.nombreUsuario %></a>
-            <ul class="ul-opciones" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/usuarios/profile">Mi perfil</a> 
-                <li><hr class="dropdown-divider"></li>
                 <a class="dropdown-item" href="/usuarios/logout">Cerrar sesión</a>
-                <li type="button" class= "icono-carrito"><i class="fas fa-shopping-basket"></i></li>
-            </ul>
             </li>
          
         <% } else { %>
-            <div class="items-barra-logeo">
-                <li><a onclick="location.href='/usuarios/register'"><i class="fas fa-address-card"></i></a></li>
-                <li><a onclick= "location.href='/usuarios/login'"><i class="fas fa-sign-in-alt"></i></a></li>
-                <li><button class="icono-carrito"><i class="fas fa-shopping-basket"></i></button></li>
+            <li class="items-barra-logeo">
+                <a href='/usuarios/register'>Registrate</a>
+                <i class="fas fa-address-card"></i>
+            </li>
+            <li class="items-barra-logeo">
+                <a href='/usuarios/login'>Ingresa</a>
+                <i class="fas fa-sign-in-alt"></i>
+            </li>
+            
             
         <% } %>
-        </div>
+            <li class="items-barra-logeo">
+                <a href="#">Mis compras</a>
+                    <i class="fas fa-shopping-bag"></i>
+            </li>
+        </li>
 </ul>
 </nav>
         </header>

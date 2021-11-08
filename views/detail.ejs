@@ -8,24 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <%- include('./../views/partials/header') %> 
+    <%- include('./partials/header') %> 
     <div class="banner"><img src="/img/img-home-banner.jpg" width="100%"></div>
 <main>
 	<div class="container products-wrapper">
-		<div class="col-12">
+		<div >
 				<h2 class="products-title"></h2></div>
 		<div class="product-detail">
 		<div class="rowe">	
-				<div class="col-12 col-lg-8">
+				<div class="caja-izquierda" >
 					<img src="/img/<%=productoEnDetalle.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description"><%=productoEnDetalle.description %>
 					</p>
 				</div>
-				<div class="col-12 col-lg-4">
+				<div >
 					<article class="product-detail-info">
 						<h2 class="product-detail-title"><%=productoEnDetalle.name %></h2>
 						
@@ -50,11 +49,13 @@
 
 						<button onclick="location.href='#'" class="buy-now-button">COMPRAR AHORA</button>
 						<hr>
-
+			<% if(locals.isLogged.rol === 1) { %>
 						<button onclick="location.href='/productos/edit/<%=productoEnDetalle.id %>'" class="action-button edit">EDITAR PRODUCTO</button>
 						<form action="/productos/<%=productoEnDetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
+
+			<% } %>
 					</article>
 				</div>
 			</div>

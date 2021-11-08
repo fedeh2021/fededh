@@ -1,24 +1,14 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Liebre</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
-</head>
+	<%- include('./partials/head') %>
 <body>
-    <%- include('./../views/partials/header') %> 
+    <%- include('./partials/header') %> 
     <div class="banner"><img src="/img/img-home-banner.jpg" width="100%"></div>
 	<!-- todos los productos -->
 	<div class="fondo">
 	
 	<!-- Container -->
 	<div class="formulario">
-		<div class="row">
+		<div class="">
 			<div class="col-md-3">
 				<h2>Hola <%=user.fullName %> </h2>
 				<img src="/img/avatars/<%=user.avatar %> ">
@@ -27,6 +17,7 @@
 				<div class="alert alert-success"><%=user.nombreUsuario %> </div>
 				<div class="alert alert-success"><%=user.email %> </div>
 				<div class="alert alert-success"><%=user.birthday %> </div>
+				<%=user.rol %>
 			</div>
 		</div>
 	</div>

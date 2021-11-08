@@ -36,4 +36,6 @@ router.put('/edit/:id', productsController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productsController.destroy); 
 
+router.get("/search", productsController.search);
+
 module.exports = router;

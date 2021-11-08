@@ -130,7 +130,7 @@ main {
 }
 .items-barra-logeo{
     width: 20%;
-    padding: 0 20%;
+    padding: 0 14%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,6 +282,10 @@ nav {
     font-size: 2em;
     margin-right: 15px;
 }
+.caja-izquierda{
+    position: relative;
+    width: 60%;
+}
 .products-wrapper{
     padding: 20px;
     background-color: #ebebeb;
@@ -299,7 +303,7 @@ nav {
     margin: 10px 0;
 }
 .product-detail-img{
-    width: 70%;
+    width: 60%;
     display: block;
     margin: auto;
 }
@@ -424,7 +428,7 @@ textarea.form-input{
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1023px) { 
     .logo {
         width: 100%;
     }
@@ -469,8 +473,10 @@ textarea.form-input{
         display: grid !important;
         grid-template-columns: repeat(2,1fr);
     }
+    
 }
-@media (min-width: 1200px) {
+
+@media (min-width: 1024px) {
     .row {
         display: grid !important;
         grid-template-columns: repeat(4,1fr);
@@ -481,6 +487,9 @@ textarea.form-input{
     }
     .nav-search {
         width: 70%;
+    }
+    .rowe{
+        display: flex;
     }
 }
 
@@ -494,11 +503,6 @@ textarea.form-input{
 .row {
    display: flex;
    flex-wrap: wrap;
-}
-.rowe {
-    display: flex;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 .footer-data {

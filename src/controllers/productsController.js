@@ -81,6 +81,9 @@ const controller = {
 		res.render('detail',{productoEnDetalle: productoEncontrado})
 		
 	},
+	search: (req, res) => {
+
+	},
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
