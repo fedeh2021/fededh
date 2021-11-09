@@ -21,8 +21,10 @@
     <li><a href="/productos">Todos los productos</a></li>
     <li><a href="#">Ofertas</a></li>
     <li><a href="#">Tiendas Oficiales</a></li>
-    <% if (locals.isLogged.rol === 1) { %>
+    <% if(locals.userLogged) { %>
+    <% if(locals.userLogged.rol == 1) { %>
     <li><a href="/productos/create">Vender</a></li>
+    <% } %>
     <% } %>
     <li><a href="#">Ayuda</a></li>
 </ul>

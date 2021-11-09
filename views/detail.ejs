@@ -49,7 +49,7 @@
 
 						<button onclick="location.href='#'" class="buy-now-button">COMPRAR AHORA</button>
 						<hr>
-			<% if(locals.isLogged.rol === 1) { %>
+			<% if(locals.userLogged.rol == 1) { %>
 						<button onclick="location.href='/productos/edit/<%=productoEnDetalle.id %>'" class="action-button edit">EDITAR PRODUCTO</button>
 						<form action="/productos/<%=productoEnDetalle.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
